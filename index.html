@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MealMate | Recipe Finder</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app-container">
+    <header class="app-header">
+      <div>
+        <p class="eyebrow">YOUR PERSONAL RECIPE APP</p>
+        <h1>MealMate 🍽️</h1>
+        <p>Find tasty meals and discover new favorites.</p>
+      </div>
+
+      <div class="header-icon">👨‍🍳</div>
+    </header>
+
+    <section class="search-section">
+      <div class="search-box">
+        <span>🔍</span>
+
+        <input
+          id="searchInput"
+          type="search"
+          placeholder="Search meals..."
+        />
+      </div>
+
+      <div class="category-buttons">
+        <button class="category-button active" data-category="All">
+          All
+        </button>
+
+        <button class="category-button" data-category="Vegetarian">
+          🥗 Vegetarian
+        </button>
+
+        <button class="category-button" data-category="Non-Vegetarian">
+          🍗 Non-Vegetarian
+        </button>
+
+        <button class="category-button" data-category="Breakfast">
+          🥞 Breakfast
+        </button>
+
+        <button class="category-button" data-category="Snacks & Fast Food">
+          🍟 Snacks & Fast Food
+        </button>
+
+        <button class="category-button" data-category="Desserts">
+          🍰 Desserts
+        </button>
+      </div>
+    </section>
+
+    <section class="recipe-heading">
+      <div>
+        <p class="eyebrow">YOUR MENU</p>
+        <h2>All Meals</h2>
+      </div>
+
+      <span id="recipeCount">0 meals</span>
+    </section>
+
+    <section id="recipeContainer" class="recipe-container"></section>
+
+    <div id="emptyState" class="empty-state hidden">
+      <div>🍽️</div>
+      <h3>No meals found</h3>
+      <p>Try searching for another meal.</p>
+    </div>
+  </main>
+
+  <div id="recipeModal" class="modal hidden">
+    <div class="modal-content">
+      <button id="closeModal" class="close-button" type="button">
+        ×
+      </button>
+
+      <div id="modalBody"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
